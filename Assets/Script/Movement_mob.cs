@@ -8,16 +8,7 @@ public class Movement_mob : MonoBehaviour
 
 {
     public float moveSpeed = 5;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-    }
+  
 
     private void FixedUpdate()
     {
@@ -29,15 +20,12 @@ public class Movement_mob : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        transform.position = pos;
+        transform.position = pos;  
 
     }
-
-
-
-
-
-
-
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        Destroy(gameObject);
+    }
 }
 
