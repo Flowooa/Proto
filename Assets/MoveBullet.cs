@@ -20,7 +20,8 @@ public class MoveBullet : MonoBehaviour
         rb.velocity = Vector2.right * speed;
     }
     private void OnCollisionEnter2D(Collision2D collision)
-    {
+    {   
+      
         Destroy(gameObject);
     }
 }
