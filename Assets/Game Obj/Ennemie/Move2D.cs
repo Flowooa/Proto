@@ -8,8 +8,7 @@ public class Move2D : MonoBehaviour
     [HideInInspector] public Vector2 direction;
 
     private Rigidbody2D rb2D;
-    public Transform origine;
-    public Transform maximum;
+   
 
     private void Awake()
     {

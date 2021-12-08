@@ -10,9 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 672761504987053970}
   - component: {fileID: 672761504987053969}
-  - component: {fileID: 672761504987053968}
-  - component: {fileID: 672761504987053967}
-  - component: {fileID: 672761504987053966}
   m_Layer: 0
   m_Name: Mechant
   m_TagString: Ennemy
@@ -85,48 +82,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &672761504987053968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672761504987053965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a329f0ff146fd344f93324a4f4f4424a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &672761504987053967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672761504987053965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 49ebb0bf4ad7adb4b8f71b011ebeb148, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 53927534151510362, guid: cd8a7e534414ce94fb9b2d96f73de45d, type: 3}
-  direction: {x: 1, y: 0}
-  bulletSpeed: 5
---- !u!114 &672761504987053966
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 672761504987053965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ff0cd05f8cf21448094608ce3500f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  startingHealth: 1
-  damageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  currentHealth: 0
