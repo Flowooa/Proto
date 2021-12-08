@@ -21,7 +21,10 @@ public class MoveBullet : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {   
-      
+      if(collision.gameObject.tag == "Ennemy")
         Destroy(gameObject);
+
+       if (collision.gameObject.tag == "Wall")
+            Destroy(gameObject);
     }
 }

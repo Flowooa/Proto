@@ -71,6 +71,33 @@
                     "isPartOfComposite": true
                 }
             ]
+        },
+        {
+            "name": "Fire",
+            "id": "2bb3d578-76de-425c-aa0e-7bc82f7d5a1e",
+            "actions": [
+                {
+                    "name": "Bim",
+                    "type": "Button",
+                    "id": "b7be14f1-47c6-42e1-a4ce-b0b910b15c6a",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "55544e34-29d2-438a-8c9a-6427b493cc44",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Bim",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": []
