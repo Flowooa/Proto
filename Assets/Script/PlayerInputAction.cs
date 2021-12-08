@@ -84,6 +84,33 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": true
                 }
             ]
+        },
+        {
+            ""name"": ""Fire"",
+            ""id"": ""2bb3d578-76de-425c-aa0e-7bc82f7d5a1e"",
+            ""actions"": [
+                {
+                    ""name"": ""Bim"",
+                    ""type"": ""Button"",
+                    ""id"": ""b7be14f1-47c6-42e1-a4ce-b0b910b15c6a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""55544e34-29d2-438a-8c9a-6427b493cc44"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Bim"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -91,6 +118,9 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         // Mouvement
         m_Mouvement = asset.FindActionMap("Mouvement", throwIfNotFound: true);
         m_Mouvement_Move = m_Mouvement.FindAction("Move", throwIfNotFound: true);
+        // Fire
+        m_Fire = asset.FindActionMap("Fire", throwIfNotFound: true);
+        m_Fire_Bim = m_Fire.FindAction("Bim", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -169,8 +199,45 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         }
     }
     public MouvementActions @Mouvement => new MouvementActions(this);
+
+    // Fire
+    private readonly InputActionMap m_Fire;
+    private IFireActions m_FireActionsCallbackInterface;
+    private readonly InputAction m_Fire_Bim;
+    public struct FireActions
+    {
+        private @PlayerInputAction m_Wrapper;
+        public FireActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Bim => m_Wrapper.m_Fire_Bim;
+        public InputActionMap Get() { return m_Wrapper.m_Fire; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(FireActions set) { return set.Get(); }
+        public void SetCallbacks(IFireActions instance)
+        {
+            if (m_Wrapper.m_FireActionsCallbackInterface != null)
+            {
+                @Bim.started -= m_Wrapper.m_FireActionsCallbackInterface.OnBim;
+                @Bim.performed -= m_Wrapper.m_FireActionsCallbackInterface.OnBim;
+                @Bim.canceled -= m_Wrapper.m_FireActionsCallbackInterface.OnBim;
+            }
+            m_Wrapper.m_FireActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Bim.started += instance.OnBim;
+                @Bim.performed += instance.OnBim;
+                @Bim.canceled += instance.OnBim;
+            }
+        }
+    }
+    public FireActions @Fire => new FireActions(this);
     public interface IMouvementActions
     {
         void OnMove(InputAction.CallbackContext context);
+    }
+    public interface IFireActions
+    {
+        void OnBim(InputAction.CallbackContext context);
     }
 }
