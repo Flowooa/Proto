@@ -26,6 +26,8 @@ public class LifeBehaviour : MonoBehaviour
     {   
         if(collision.gameObject.tag == "Ennemy")
          TakeDamage();
+        if (collision.gameObject.tag == "Bullet")
+            TakeDamage();
     }
 
 

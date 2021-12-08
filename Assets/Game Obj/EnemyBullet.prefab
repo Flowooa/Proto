@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 2643390153061978139}
   m_Layer: 9
   m_Name: EnemyBullet
-  m_TagString: Ennemy
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -100,8 +100,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   direction: {x: 0, y: 0}
-  origine: {fileID: 0}
-  maximum: {fileID: 0}
 --- !u!58 &2368936885449600487
 CircleCollider2D:
   m_ObjectHideFlags: 0

@@ -26,6 +26,11 @@ public class LifeEnnemyBullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (collision.gameObject.tag == "Player")
+            TakeDamage();
+        if (collision.gameObject.tag == "Wall")
+            TakeDamage();
+        if (collision.gameObject.tag == "Ennemy")
             TakeDamage();
     }
 
