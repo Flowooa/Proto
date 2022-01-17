@@ -356,42 +356,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 454cf7c1012692e4385255e098990da8, type: 3}
---- !u!1 &287453861 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5266427178357289021, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-  m_PrefabInstance: {fileID: 5266427178026968736}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &287453862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287453861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd9953c7ae7c98f4f91e737b482b6226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  startingHealth: 1
-  damageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  currentHealth: 0
---- !u!114 &287453864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 287453861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4600fd537e0a6624182940e3ae5d79ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!1 &358376548
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,72 +1167,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 187ec1144aa8604458eb43743ad83828, type: 3}
---- !u!1001 &5266427178026968736
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 6.06
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.21
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357288961, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357289021, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_Name
-      value: Ennemie
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357289021, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5266427178357289021, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-      propertyPath: m_TagString
-      value: Ennemy
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5266427178357289023, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: 767eb57b12ed984438922a510b9cb3ee, type: 3}
 --- !u!1001 &9075464842197022256
 PrefabInstance:
   m_ObjectHideFlags: 0
