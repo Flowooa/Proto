@@ -9,9 +9,6 @@ public class Spawner : MonoBehaviour
     public GameObject mechant;
     private bool seul = true;
     
-
-
-    // Start is called before the first frame update
     void Start()
     {
         if(seul == true)
