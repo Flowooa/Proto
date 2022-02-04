@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 5266427178357288961}
   - component: {fileID: 5266427178357288960}
-  - component: {fileID: 5266427178357289023}
   - component: {fileID: 5266427178357289022}
   - component: {fileID: -8316092208358483978}
-  - component: {fileID: -1681451547477477540}
+  - component: {fileID: 4769373017307603863}
+  - component: {fileID: -6057283538938754780}
   m_Layer: 0
   m_Name: Ennemie
   m_TagString: Untagged
@@ -86,19 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &5266427178357289023
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5266427178357289021}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4600fd537e0a6624182940e3ae5d79ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
 --- !u!114 &5266427178357289022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -140,7 +127,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-1681451547477477540
+--- !u!114 &4769373017307603863
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -149,6 +136,25 @@ MonoBehaviour:
   m_GameObject: {fileID: 5266427178357289021}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8471df3368bcacd4199dd26c0fe87881, type: 3}
+  m_Script: {fileID: 11500000, guid: 37f192c4c57130e42a8cf4b360b4b44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 1
+  startingHealth: 2
+  damageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  currentHealth: 0
+--- !u!114 &-6057283538938754780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5266427178357289021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4600fd537e0a6624182940e3ae5d79ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 5

@@ -8,7 +8,7 @@ public class Movement_mob_sin : MonoBehaviour
 
 {
     public float moveSpeed = 5;
-  
+
 
     private void FixedUpdate()
     {
@@ -16,16 +16,8 @@ public class Movement_mob_sin : MonoBehaviour
 
         pos.x -= moveSpeed * Time.fixedDeltaTime;
 
-        if (pos.x < -10)
-        {
-            Destroy(gameObject);
-        }
-        transform.position = pos;  
 
     }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        Destroy(gameObject);
-    }
 }
+   
 
