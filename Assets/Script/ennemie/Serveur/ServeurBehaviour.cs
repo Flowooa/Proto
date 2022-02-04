@@ -2,19 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemieBehaviourSlowly : MonoBehaviour
+public class ServeurBehaviour : MonoBehaviour
 {
-    private Shooter2D shooter;
+    private ServeurPattern shooter;
 
     // Start is called before the first frame update
     private void Start()
     {
-        shooter = GetComponent<Shooter2D>();
-        InvokeRepeating(nameof(Shoot), 0, 1f);
+        shooter = GetComponent<ServeurPattern>();
+        InvokeRepeating(nameof(Shoot), 0, 3f);
     }
 
     private void Shoot()
     {
-        shooter.Shoot();
+        shooter.pentakill();
     }
 }
