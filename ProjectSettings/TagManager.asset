@@ -42,6 +42,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Fond
+    uniqueID: 4226815759
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ennemy
+    uniqueID: 3920931305
+    locked: 0
+  - name: Player
+    uniqueID: 4142834741
     locked: 0
