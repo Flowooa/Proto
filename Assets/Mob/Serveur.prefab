@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5874975757212795253}
   - component: {fileID: 5874975757212795252}
   - component: {fileID: 5874975757212795255}
-  - component: {fileID: -6995256443360707163}
   m_Layer: 0
   m_Name: Serveur
   m_TagString: Ennemy
@@ -73,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 254cab892b6c4a1479c09cc244c7cb2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -111,24 +110,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &-6995256443360707163
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5874975757212795249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37f192c4c57130e42a8cf4b360b4b44d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 2
-  startingHealth: 2
-  damageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  currentHealth: 0
 --- !u!1 &5874975758578418603
 GameObject:
   m_ObjectHideFlags: 0

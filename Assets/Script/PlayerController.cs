@@ -30,4 +30,7 @@ public class PlayerController : MonoBehaviour
         Vector2 MoveInput = playerInput.Mouvement.Move.ReadValue<Vector2>();
         rb.velocity = MoveInput * speed;
     }
+
+ 
+
 }
