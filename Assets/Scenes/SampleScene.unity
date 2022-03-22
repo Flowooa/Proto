@@ -403,6 +403,22 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.99
       objectReference: {fileID: 0}
+    - target: {fileID: 8077538833085881714, guid: 454cf7c1012692e4385255e098990da8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077538833085881714, guid: 454cf7c1012692e4385255e098990da8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077538833085881714, guid: 454cf7c1012692e4385255e098990da8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077538833085881714, guid: 454cf7c1012692e4385255e098990da8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.59
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 454cf7c1012692e4385255e098990da8, type: 3}
 --- !u!1 &358376548
@@ -433,7 +449,11 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+<<<<<<< Updated upstream
   m_RootOrder: 10
+=======
+  m_RootOrder: 1
+>>>>>>> Stashed changes
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &374358150
 PrefabInstance:
@@ -1316,6 +1336,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 2994194963277030168, guid: 6c4d3ca94e3b3274cb734f5644f9999a, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7482667652216324306, guid: 80a85b87776461d4caae83971decaf79, type: 3}
+    - target: {fileID: 2994194963277030168, guid: 6c4d3ca94e3b3274cb734f5644f9999a, type: 3}
       propertyPath: m_Color.b
       value: 0.4764151
       objectReference: {fileID: 0}
@@ -1325,6 +1349,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2994194963277030168, guid: 6c4d3ca94e3b3274cb734f5644f9999a, type: 3}
       propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2994194963277030168, guid: 6c4d3ca94e3b3274cb734f5644f9999a, type: 3}
+      propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2994194963277030171, guid: 6c4d3ca94e3b3274cb734f5644f9999a, type: 3}
