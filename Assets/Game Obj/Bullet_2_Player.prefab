@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 1347249632109856652}
   - component: {fileID: 7948838603262530447}
   - component: {fileID: 4053529020225211514}
-  - component: {fileID: -543875217776730484}
   - component: {fileID: 7929495702335422258}
   - component: {fileID: -2515671649558665385}
+  - component: {fileID: 7418242784063300100}
   m_Layer: 0
   m_Name: Bullet_2_Player
   m_TagString: Player
@@ -101,24 +101,6 @@ MonoBehaviour:
   direction: {x: -1, y: 0}
   speed: 12
   Velocity: {x: 0, y: 0}
---- !u!114 &-543875217776730484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6231159295287394501}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f3ff0cd05f8cf21448094608ce3500f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  startingHealth: 1
-  damageTaken:
-    m_PersistentCalls:
-      m_Calls: []
-  currentHealth: 0
 --- !u!58 &7929495702335422258
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -156,3 +138,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7418242784063300100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6231159295287394501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55824c326cd741247b6d2d0b3a0b04a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 1
+  startingHealth: 1
+  damageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  currentHealth: 0

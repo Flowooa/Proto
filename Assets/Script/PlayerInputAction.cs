@@ -25,6 +25,14 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Shoot"",
+                    ""type"": ""Button"",
+                    ""id"": ""bb4728e2-5644-44d9-9a48-771285de9be0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -45,7 +53,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -56,7 +64,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -67,7 +75,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
@@ -78,21 +86,43 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""keyboard"",
                     ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b2ad4741-b9b8-44a9-ae71-99cdbe5b1429"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""controller"",
+                    ""action"": ""Move"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2ec16d66-a172-4546-924b-09a094c0699c"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""controller"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         },
         {
-            ""name"": ""Fire"",
-            ""id"": ""2bb3d578-76de-425c-aa0e-7bc82f7d5a1e"",
+            ""name"": ""Pause"",
+            ""id"": ""b06c97e4-3ef7-4886-90a8-1f30c47cf903"",
             ""actions"": [
                 {
-                    ""name"": ""Bim"",
+                    ""name"": ""pause"",
                     ""type"": ""Button"",
-                    ""id"": ""b7be14f1-47c6-42e1-a4ce-b0b910b15c6a"",
+                    ""id"": ""41fd406b-2c12-47c3-b4db-f2b3cb75de02"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -101,26 +131,38 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""55544e34-29d2-438a-8c9a-6427b493cc44"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""9ee945de-275b-4020-887f-7279e8f5125b"",
+                    ""path"": ""<Keyboard>/escape"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Bim"",
+                    ""action"": ""pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""controller"",
+            ""bindingGroup"": ""controller"",
+            ""devices"": []
+        },
+        {
+            ""name"": ""keyboard"",
+            ""bindingGroup"": ""keyboard"",
+            ""devices"": []
+        }
+    ]
 }");
         // Mouvement
         m_Mouvement = asset.FindActionMap("Mouvement", throwIfNotFound: true);
         m_Mouvement_Move = m_Mouvement.FindAction("Move", throwIfNotFound: true);
-        // Fire
-        m_Fire = asset.FindActionMap("Fire", throwIfNotFound: true);
-        m_Fire_Bim = m_Fire.FindAction("Bim", throwIfNotFound: true);
+        m_Mouvement_Shoot = m_Mouvement.FindAction("Shoot", throwIfNotFound: true);
+        // Pause
+        m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
+        m_Pause_pause = m_Pause.FindAction("pause", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -171,11 +213,13 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     private readonly InputActionMap m_Mouvement;
     private IMouvementActions m_MouvementActionsCallbackInterface;
     private readonly InputAction m_Mouvement_Move;
+    private readonly InputAction m_Mouvement_Shoot;
     public struct MouvementActions
     {
         private @PlayerInputAction m_Wrapper;
         public MouvementActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
         public InputAction @Move => m_Wrapper.m_Mouvement_Move;
+        public InputAction @Shoot => m_Wrapper.m_Mouvement_Shoot;
         public InputActionMap Get() { return m_Wrapper.m_Mouvement; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -188,6 +232,9 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @Move.started -= m_Wrapper.m_MouvementActionsCallbackInterface.OnMove;
                 @Move.performed -= m_Wrapper.m_MouvementActionsCallbackInterface.OnMove;
                 @Move.canceled -= m_Wrapper.m_MouvementActionsCallbackInterface.OnMove;
+                @Shoot.started -= m_Wrapper.m_MouvementActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_MouvementActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_MouvementActionsCallbackInterface.OnShoot;
             }
             m_Wrapper.m_MouvementActionsCallbackInterface = instance;
             if (instance != null)
@@ -195,49 +242,71 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
                 @Move.started += instance.OnMove;
                 @Move.performed += instance.OnMove;
                 @Move.canceled += instance.OnMove;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
             }
         }
     }
     public MouvementActions @Mouvement => new MouvementActions(this);
 
-    // Fire
-    private readonly InputActionMap m_Fire;
-    private IFireActions m_FireActionsCallbackInterface;
-    private readonly InputAction m_Fire_Bim;
-    public struct FireActions
+    // Pause
+    private readonly InputActionMap m_Pause;
+    private IPauseActions m_PauseActionsCallbackInterface;
+    private readonly InputAction m_Pause_pause;
+    public struct PauseActions
     {
         private @PlayerInputAction m_Wrapper;
-        public FireActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Bim => m_Wrapper.m_Fire_Bim;
-        public InputActionMap Get() { return m_Wrapper.m_Fire; }
+        public PauseActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @pause => m_Wrapper.m_Pause_pause;
+        public InputActionMap Get() { return m_Wrapper.m_Pause; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(FireActions set) { return set.Get(); }
-        public void SetCallbacks(IFireActions instance)
+        public static implicit operator InputActionMap(PauseActions set) { return set.Get(); }
+        public void SetCallbacks(IPauseActions instance)
         {
-            if (m_Wrapper.m_FireActionsCallbackInterface != null)
+            if (m_Wrapper.m_PauseActionsCallbackInterface != null)
             {
-                @Bim.started -= m_Wrapper.m_FireActionsCallbackInterface.OnBim;
-                @Bim.performed -= m_Wrapper.m_FireActionsCallbackInterface.OnBim;
-                @Bim.canceled -= m_Wrapper.m_FireActionsCallbackInterface.OnBim;
+                @pause.started -= m_Wrapper.m_PauseActionsCallbackInterface.OnPause;
+                @pause.performed -= m_Wrapper.m_PauseActionsCallbackInterface.OnPause;
+                @pause.canceled -= m_Wrapper.m_PauseActionsCallbackInterface.OnPause;
             }
-            m_Wrapper.m_FireActionsCallbackInterface = instance;
+            m_Wrapper.m_PauseActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Bim.started += instance.OnBim;
-                @Bim.performed += instance.OnBim;
-                @Bim.canceled += instance.OnBim;
+                @pause.started += instance.OnPause;
+                @pause.performed += instance.OnPause;
+                @pause.canceled += instance.OnPause;
             }
         }
     }
-    public FireActions @Fire => new FireActions(this);
+    public PauseActions @Pause => new PauseActions(this);
+    private int m_controllerSchemeIndex = -1;
+    public InputControlScheme controllerScheme
+    {
+        get
+        {
+            if (m_controllerSchemeIndex == -1) m_controllerSchemeIndex = asset.FindControlSchemeIndex("controller");
+            return asset.controlSchemes[m_controllerSchemeIndex];
+        }
+    }
+    private int m_keyboardSchemeIndex = -1;
+    public InputControlScheme keyboardScheme
+    {
+        get
+        {
+            if (m_keyboardSchemeIndex == -1) m_keyboardSchemeIndex = asset.FindControlSchemeIndex("keyboard");
+            return asset.controlSchemes[m_keyboardSchemeIndex];
+        }
+    }
     public interface IMouvementActions
     {
         void OnMove(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
     }
-    public interface IFireActions
+    public interface IPauseActions
     {
-        void OnBim(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
     }
 }
