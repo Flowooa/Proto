@@ -24,5 +24,6 @@ public class PlayerController : MonoBehaviour
         MoveInput = context.ReadValue<Vector2>();
     }
 
+    
 
 }

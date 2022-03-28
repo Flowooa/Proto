@@ -119,8 +119,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3ff0cd05f8cf21448094608ce3500f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 4
-  startingHealth: 4
+  maxHealth: 6
+  startingHealth: 6
   damageTaken:
     m_PersistentCalls:
       m_Calls: []
