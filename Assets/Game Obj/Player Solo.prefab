@@ -50,7 +50,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4245789118052914325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
@@ -88,6 +88,18 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: b7be14f1-47c6-42e1-a4ce-b0b910b15c6a
     m_ActionName: Fire/Bim[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: bf1c57b6-8eaf-4b07-897c-dfd25e3d7d7a
+    m_ActionName: PlayerSolo/New action[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 38e47b63-1f7a-4e40-aa7d-092abbe2570e
+    m_ActionName: Player1/New action[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 6fd28d65-2e84-4679-aa64-337637e3f689
+    m_ActionName: Player2/New action[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Mouvement
@@ -222,7 +234,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2994194963277030172, guid: 6c4d3ca94e3b3274cb734f5644f9999a, type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player Solo
       objectReference: {fileID: 0}
     - target: {fileID: 2994194963277030172, guid: 6c4d3ca94e3b3274cb734f5644f9999a, type: 3}
       propertyPath: m_TagString

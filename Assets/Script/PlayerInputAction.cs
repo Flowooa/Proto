@@ -515,10 +515,18 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         // Mouvement
         m_Mouvement = asset.FindActionMap("Mouvement", throwIfNotFound: true);
         m_Mouvement_Move = m_Mouvement.FindAction("Move", throwIfNotFound: true);
-        m_Mouvement_Shoot = m_Mouvement.FindAction("Shoot", throwIfNotFound: true);
-        // Pause
-        m_Pause = asset.FindActionMap("Pause", throwIfNotFound: true);
-        m_Pause_pause = m_Pause.FindAction("pause", throwIfNotFound: true);
+        // Fire
+        m_Fire = asset.FindActionMap("Fire", throwIfNotFound: true);
+        m_Fire_Bim = m_Fire.FindAction("Bim", throwIfNotFound: true);
+        // PlayerSolo
+        m_PlayerSolo = asset.FindActionMap("PlayerSolo", throwIfNotFound: true);
+        m_PlayerSolo_Newaction = m_PlayerSolo.FindAction("New action", throwIfNotFound: true);
+        // Player1
+        m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
+        m_Player1_Newaction = m_Player1.FindAction("New action", throwIfNotFound: true);
+        // Player2
+        m_Player2 = asset.FindActionMap("Player2", throwIfNotFound: true);
+        m_Player2_Newaction = m_Player2.FindAction("New action", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -637,25 +645,106 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
             }
         }
     }
-    public PauseActions @Pause => new PauseActions(this);
-    private int m_controllerSchemeIndex = -1;
-    public InputControlScheme controllerScheme
+    public FireActions @Fire => new FireActions(this);
+
+    // PlayerSolo
+    private readonly InputActionMap m_PlayerSolo;
+    private IPlayerSoloActions m_PlayerSoloActionsCallbackInterface;
+    private readonly InputAction m_PlayerSolo_Newaction;
+    public struct PlayerSoloActions
     {
-        get
+        private @PlayerInputAction m_Wrapper;
+        public PlayerSoloActions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_PlayerSolo_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_PlayerSolo; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(PlayerSoloActions set) { return set.Get(); }
+        public void SetCallbacks(IPlayerSoloActions instance)
         {
-            if (m_controllerSchemeIndex == -1) m_controllerSchemeIndex = asset.FindControlSchemeIndex("controller");
-            return asset.controlSchemes[m_controllerSchemeIndex];
+            if (m_Wrapper.m_PlayerSoloActionsCallbackInterface != null)
+            {
+                @Newaction.started -= m_Wrapper.m_PlayerSoloActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_PlayerSoloActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_PlayerSoloActionsCallbackInterface.OnNewaction;
+            }
+            m_Wrapper.m_PlayerSoloActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
+            }
         }
     }
-    private int m_keyboardSchemeIndex = -1;
-    public InputControlScheme keyboardScheme
+    public PlayerSoloActions @PlayerSolo => new PlayerSoloActions(this);
+
+    // Player1
+    private readonly InputActionMap m_Player1;
+    private IPlayer1Actions m_Player1ActionsCallbackInterface;
+    private readonly InputAction m_Player1_Newaction;
+    public struct Player1Actions
     {
-        get
+        private @PlayerInputAction m_Wrapper;
+        public Player1Actions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Player1_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Player1; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player1Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer1Actions instance)
         {
-            if (m_keyboardSchemeIndex == -1) m_keyboardSchemeIndex = asset.FindControlSchemeIndex("keyboard");
-            return asset.controlSchemes[m_keyboardSchemeIndex];
+            if (m_Wrapper.m_Player1ActionsCallbackInterface != null)
+            {
+                @Newaction.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnNewaction;
+            }
+            m_Wrapper.m_Player1ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
+            }
         }
     }
+    public Player1Actions @Player1 => new Player1Actions(this);
+
+    // Player2
+    private readonly InputActionMap m_Player2;
+    private IPlayer2Actions m_Player2ActionsCallbackInterface;
+    private readonly InputAction m_Player2_Newaction;
+    public struct Player2Actions
+    {
+        private @PlayerInputAction m_Wrapper;
+        public Player2Actions(@PlayerInputAction wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Newaction => m_Wrapper.m_Player2_Newaction;
+        public InputActionMap Get() { return m_Wrapper.m_Player2; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(Player2Actions set) { return set.Get(); }
+        public void SetCallbacks(IPlayer2Actions instance)
+        {
+            if (m_Wrapper.m_Player2ActionsCallbackInterface != null)
+            {
+                @Newaction.started -= m_Wrapper.m_Player2ActionsCallbackInterface.OnNewaction;
+                @Newaction.performed -= m_Wrapper.m_Player2ActionsCallbackInterface.OnNewaction;
+                @Newaction.canceled -= m_Wrapper.m_Player2ActionsCallbackInterface.OnNewaction;
+            }
+            m_Wrapper.m_Player2ActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Newaction.started += instance.OnNewaction;
+                @Newaction.performed += instance.OnNewaction;
+                @Newaction.canceled += instance.OnNewaction;
+            }
+        }
+    }
+    public Player2Actions @Player2 => new Player2Actions(this);
     public interface IMouvementActions
     {
         void OnMove(InputAction.CallbackContext context);
