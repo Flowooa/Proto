@@ -12,8 +12,11 @@ GameObject:
   - component: {fileID: 7702025505049066170}
   - component: {fileID: 2599938611167506689}
   - component: {fileID: 4493589550780229112}
+<<<<<<< Updated upstream
   - component: {fileID: 4386771592855561703}
   - component: {fileID: -3119215016250163142}
+=======
+>>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Player2
   m_TagString: Player
@@ -125,6 +128,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentHealth: 0
+<<<<<<< Updated upstream
 --- !u!114 &4386771592855561703
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,3 +180,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+=======
+>>>>>>> Stashed changes
