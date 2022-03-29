@@ -34,7 +34,7 @@ public class Player_Shoot : MonoBehaviour
     }
     public void TirGauche (InputAction.CallbackContext context)
     {
-        if (shoot1)
+        if (Time.time > lastShoot + cadence)
         {
             shoot1 = false;
             foreach (Gun_Shoot1 gun in guns1)
