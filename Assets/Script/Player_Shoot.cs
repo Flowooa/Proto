@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Player_Shoot : MonoBehaviour
 {
+    public float cadence;
+    private float lastShoot;
 
     Gun_Shoot[] guns;
     Gun_Shoot1[] guns1;
@@ -18,15 +21,9 @@ public class Player_Shoot : MonoBehaviour
         guns1 = transform.GetComponentsInChildren<Gun_Shoot1>();
     }
     
-
-    // Update is called once per frame
-    void Update()
+    public void TirDroite (InputAction.CallbackContext context)
     {
-
-
-        shoot1 = Input.GetKeyDown(KeyCode.LeftArrow);
-        shoot = Input.GetKeyDown(KeyCode.RightArrow);
-        if (shoot)
+        if (Time.time > lastShoot + cadence)
         {
             shoot = false;
             foreach (Gun_Shoot gun in guns)
@@ -34,7 +31,9 @@ public class Player_Shoot : MonoBehaviour
                 gun.Shoot();
             }
         }
-
+    }
+    public void TirGauche (InputAction.CallbackContext context)
+    {
         if (shoot1)
         {
             shoot1 = false;
@@ -43,7 +42,7 @@ public class Player_Shoot : MonoBehaviour
                 gun.Shoot1();
             }
         }
-
-
     }
+
+  
 }

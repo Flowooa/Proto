@@ -9,7 +9,7 @@ public class Player_Ult : MonoBehaviour
     bool shoot;
     public float rate;
     private float lastShoot;
-    bool letsgo = false;
+    bool blink;
 
     Animator animator;
 
@@ -23,26 +23,31 @@ public class Player_Ult : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {  
+    {
         shoot = Input.GetKeyDown(KeyCode.DownArrow);
 
         if (Time.time > lastShoot + rate)
         {
-            animator.SetTrigger("blink");
-            if (shoot)
+            if (!blink)
             {
-                shoot = false;
-                animator.SetTrigger("not");
+                animator.SetTrigger("blink");
+                
 
-                foreach (Ult_Shoot gun in Ult)
+                if (shoot)
                 {
-                    gun.UltShoot();
+                    shoot = false;
+               
+                    animator.SetTrigger("not");
+
+                    foreach (Ult_Shoot gun in Ult)
+                    {
+                        gun.UltShoot();
+                    }
                 }
+
             }
             lastShoot = Time.time;
-        }
-        
-        
-    }
 
+        }
+    }
 }
