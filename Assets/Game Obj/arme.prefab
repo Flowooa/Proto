@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2274710849304793889}
   - component: {fileID: 6141014945960072772}
   - component: {fileID: 1563676709201199879}
+  - component: {fileID: 2830071461947963302}
   m_Layer: 0
   m_Name: arme
   m_TagString: Untagged
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d9d9592a169e54d8c49f2c1fc010f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rate: 0
+  rate: 0.2
 --- !u!114 &1563676709201199879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57,4 +58,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3c05fdd444b3cc40b4ef1fd4cf6f6da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ult: {fileID: 0}
+  Ult: {fileID: 7850385964031160532, guid: 35dfee5064526df4d882cf77abc3a8ad, type: 3}
+--- !u!114 &2830071461947963302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2274710849304793888}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eac09fd9d1cc12a428418641919e991f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 8355161223164793348, guid: 344e6412c9a1aa947810a133d25f86a2, type: 3}

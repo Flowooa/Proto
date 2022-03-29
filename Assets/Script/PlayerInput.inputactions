@@ -1,85 +1,22 @@
 {
-    "name": "PlayerInputAction",
+    "name": "PlayerInput",
     "maps": [
         {
-            "name": "Mouvement",
-            "id": "9dc013f5-8625-4709-95b5-1ceb33156054",
+            "name": "Player",
+            "id": "af1852e3-c7dd-4ef0-b385-0f4277e7cb9b",
             "actions": [
                 {
-                    "name": "Move",
-                    "type": "PassThrough",
-                    "id": "b55722e9-a90a-4e02-a986-9938cace5f70",
+                    "name": "Déplacement",
+                    "type": "Value",
+                    "id": "6dce7dd6-5948-43c6-a03f-573aaf8b2c0c",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "Move",
-                    "id": "c344f327-e686-4283-8bfe-a5a3ae85f670",
-                    "path": "2DVector",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": true,
-                    "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "259beab2-6ede-436b-8fcd-a038d5bcc2d1",
-                    "path": "<Keyboard>/w",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "cd50f2e1-c7bc-47f6-b154-5993e5cd918a",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "left",
-                    "id": "36eb2b49-335f-4be7-ae6a-0f5568630c38",
-                    "path": "<Keyboard>/a",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "right",
-                    "id": "5e9ed84c-3e74-47d3-9d7c-30c95ee04945",
-                    "path": "<Keyboard>/d",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "Fire",
-            "id": "2bb3d578-76de-425c-aa0e-7bc82f7d5a1e",
-            "actions": [
-                {
-                    "name": "Bim",
+                    "name": "Shoot",
                     "type": "Button",
-                    "id": "b7be14f1-47c6-42e1-a4ce-b0b910b15c6a",
+                    "id": "14936642-0d02-4a7d-b52c-0b5b52889dd1",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
@@ -87,13 +24,68 @@
             ],
             "bindings": [
                 {
-                    "name": "",
-                    "id": "55544e34-29d2-438a-8c9a-6427b493cc44",
-                    "path": "<Keyboard>/space",
+                    "name": "2D Vector",
+                    "id": "ede15ec8-8ae0-4e06-9fef-ecc434ee0e08",
+                    "path": "2DVector",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Bim",
+                    "action": "Déplacement",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "up",
+                    "id": "f962b1a7-3929-4d3c-9b64-0554ea1afc17",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Déplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "14b195c4-3b1a-4532-8b53-0b28cfb51fb3",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Déplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "left",
+                    "id": "5e551c30-e882-400c-bcfb-9cf2b8826a2c",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Déplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "right",
+                    "id": "fd993e4b-ce16-4ef2-8e04-9a01a5b035d1",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Déplacement",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "235662ea-da13-493a-ad05-cb93cc7bfa8a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Shoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
