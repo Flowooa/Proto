@@ -20,6 +20,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "Pause",
+                    "type": "Button",
+                    "id": "feb70705-db25-4e8f-9e4b-58a7a94573dc",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "BackShoot",
+                    "type": "Button",
+                    "id": "8368cf1e-5216-4b49-ba4d-2ecf1b8370a7",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -81,11 +97,33 @@
                 {
                     "name": "",
                     "id": "235662ea-da13-493a-ad05-cb93cc7bfa8a",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/rightArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Shoot",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9cc30783-3450-4a47-ba19-a15c780a6d93",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Pause",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "8c1394e2-2bc6-4772-b6e6-9c00226973d4",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackShoot",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
