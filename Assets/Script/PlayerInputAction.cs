@@ -2454,8 +2454,8 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
         m_Mouvement = asset.FindActionMap("Mouvement", throwIfNotFound: true);
         m_Mouvement_Move = m_Mouvement.FindAction("Move", throwIfNotFound: true);
         // Fire
-        m_Fire = asset.FindActionMap("Fire", throwIfNotFound: true);
-        m_Fire_Bim = m_Fire.FindAction("Bim", throwIfNotFound: true);
+        //m_Fire = asset.FindActionMap("Fire", throwIfNotFound: true);
+       // m_Fire_Bim = m_Fire.FindAction("Bim", throwIfNotFound: true);
         // PlayerSolo
         m_PlayerSolo = asset.FindActionMap("PlayerSolo", throwIfNotFound: true);
         m_PlayerSolo_Newaction = m_PlayerSolo.FindAction("New action", throwIfNotFound: true);
@@ -2583,7 +2583,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
             }
         }
     }
-    public FireActions @Fire => new FireActions(this);
+   // public FireActions @Fire => new FireActions(this);
 
     // PlayerSolo
     private readonly InputActionMap m_PlayerSolo;
@@ -2704,7 +2704,7 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     {
         void OnNewaction(InputAction.CallbackContext context);
     }
-    public interface IPlayerSoloActions
+    /*public interface IPlayerSoloActions
     {
         void OnNewaction(InputAction.CallbackContext context);
     }
@@ -2775,5 +2775,5 @@ public class @PlayerInputAction : IInputActionCollection, IDisposable
     public interface IPlayer2Actions
     {
         void OnNewaction(InputAction.CallbackContext context);
-    }
+    }*/
 }

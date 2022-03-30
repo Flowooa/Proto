@@ -8,6 +8,6 @@ public class PlayerSolo : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        GetComponentInParent<PlayerInput>().SwitchCurrentActionMap("PlayerSolo");
+       // GetComponentInParent<PlayerInput>().SwitchCurrentActionMap("PlayerSolo");
     }
 }
