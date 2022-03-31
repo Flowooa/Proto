@@ -19,8 +19,8 @@ public class @PlayerInput : IInputActionCollection, IDisposable
             ""id"": ""af1852e3-c7dd-4ef0-b385-0f4277e7cb9b"",
             ""actions"": [
                 {
-                    ""name"": ""Déplacement"",
-                    ""type"": ""Value"",
+                    ""name"": ""Deplacement"",
+                    ""type"": ""PassThrough"",
                     ""id"": ""6dce7dd6-5948-43c6-a03f-573aaf8b2c0c"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
@@ -59,7 +59,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -69,8 +69,8 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -80,8 +80,8 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -91,8 +91,8 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -102,10 +102,32 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""2e304020-7d61-4ae4-a4dd-2d7cb7e9f71c"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Deplacement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a5f058c8-8091-4674-a19a-52a9bf8a5f23"",
+                    ""path"": ""<XInputController>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Deplacement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
@@ -113,7 +135,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""287d32fd-18cb-4838-93bc-3cc759d286df"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -122,6 +155,28 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""name"": """",
                     ""id"": ""9cc30783-3450-4a47-ba19-a15c780a6d93"",
                     ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""98e6eaef-bcce-4ac2-b7ea-fc05082c9414"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""586778e3-accd-493f-acb0-dca6616dad93"",
+                    ""path"": ""<XInputController>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -135,7 +190,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""BackShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e0816338-6b84-4ff4-b97b-2d7f6ef699af"",
+                    ""path"": ""<XInputController>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""BackShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -147,17 +213,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
             ""id"": ""b73c811c-368a-46d8-bc57-de2cce0b0507"",
             ""actions"": [
                 {
-                    ""name"": ""Déplacement"",
-                    ""type"": ""Value"",
-                    ""id"": ""1b72f712-ff5c-41b4-b5de-3d57c0c65ae8"",
-                    ""expectedControlType"": ""Vector2"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Shoot"",
+                    ""name"": ""BackShoot"",
                     ""type"": ""Button"",
-                    ""id"": ""6095ba9c-dc8b-4709-aae1-bf01ab02ae3c"",
+                    ""id"": ""b20e0942-5075-4a47-a7af-01cea3f487ef"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
@@ -165,16 +223,24 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 {
                     ""name"": ""Pause"",
                     ""type"": ""Button"",
-                    ""id"": ""659d0f6f-a538-4b3e-8fc1-549f73f22d4f"",
+                    ""id"": ""6e3c5049-96ee-4421-a207-44d12f7d6131"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""BackShoot"",
+                    ""name"": ""Shoot"",
                     ""type"": ""Button"",
-                    ""id"": ""df5bdb68-82c1-438a-a100-2e94643af896"",
+                    ""id"": ""90654dde-1b4c-48c0-801d-c7fe546dfe86"",
                     ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Deplacement"",
+                    ""type"": ""PassThrough"",
+                    ""id"": ""76b71d3b-5c6d-4de6-af99-f5dcb52536f9"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
                 }
@@ -182,74 +248,129 @@ public class @PlayerInput : IInputActionCollection, IDisposable
             ""bindings"": [
                 {
                     ""name"": ""2D Vector"",
-                    ""id"": ""41bd5401-027b-48a3-ad84-e905f1571901"",
+                    ""id"": ""2601083b-e70a-4b53-8d30-913351228ab4"",
                     ""path"": ""2DVector"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": ""up"",
-                    ""id"": ""3a29a7e6-5fae-4de0-b406-de54fe564a24"",
+                    ""id"": ""d4aeca60-450f-441f-81cc-ef66b4b1051d"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""down"",
-                    ""id"": ""103bf49a-012e-462c-a08c-64929e8871b1"",
+                    ""id"": ""c5e9f9b6-2a69-46ce-882b-aa5ec9757d6c"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""left"",
-                    ""id"": ""2429056d-72f7-47bf-be29-4837d87c6e86"",
+                    ""id"": ""138974ff-a15e-4f7d-9cfa-e05585d0a350"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": ""right"",
-                    ""id"": ""ab283b10-54aa-4299-85cd-c1d4051887d1"",
+                    ""id"": ""3779f00b-05d4-4783-9486-458e8d1655a4"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Déplacement"",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Deplacement"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6c051bb9-c120-41ec-9d8f-06f949b7c2c0"",
+                    ""id"": ""59536ecb-ab57-4f35-9535-7790495f86fe"",
+                    ""path"": ""<Gamepad>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Deplacement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""aed393af-801a-4dca-bc02-d4cbc7383381"",
+                    ""path"": ""<XInputController>/leftStick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Deplacement"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b6509a98-251a-4697-9393-ae51f613f10d"",
                     ""path"": ""<Keyboard>/rightArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard and Mouse"",
                     ""action"": ""Shoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""9979f372-073d-435d-8d59-e505a2b21810"",
+                    ""id"": ""13fd19e8-b936-49a3-83d6-c2be71170217"",
+                    ""path"": ""<XInputController>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Shoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40756ea2-83c9-44ef-bffd-f3cb7cc2bbc6"",
                     ""path"": ""<Keyboard>/escape"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""29ae2cd9-3340-4307-8fa2-4b7a64ae06ed"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
+                    ""action"": ""Pause"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0193b944-5c10-4b36-8111-69a231c84109"",
+                    ""path"": ""<XInputController>/start"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -259,11 +380,22 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""6680d2a5-c7b1-4b4c-8c7a-64f743b1368e"",
+                    ""id"": ""f7e0edfb-d95d-41cc-b341-4ddcf09a1d0f"",
                     ""path"": ""<Keyboard>/leftArrow"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": """",
+                    ""groups"": ""Keyboard and Mouse"",
+                    ""action"": ""BackShoot"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""560a9ca4-8de6-48b1-a79a-8070e89518e8"",
+                    ""path"": ""<XInputController>/buttonWest"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Gamepad"",
                     ""action"": ""BackShoot"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -271,20 +403,53 @@ public class @PlayerInput : IInputActionCollection, IDisposable
             ]
         }
     ],
-    ""controlSchemes"": []
+    ""controlSchemes"": [
+        {
+            ""name"": ""Keyboard and Mouse"",
+            ""bindingGroup"": ""Keyboard and Mouse"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Keyboard>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<Mouse>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""Gamepad"",
+            ""bindingGroup"": ""Gamepad"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<Gamepad>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                },
+                {
+                    ""devicePath"": ""<XInputController>"",
+                    ""isOptional"": true,
+                    ""isOR"": false
+                }
+            ]
+        }
+    ]
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Déplacement = m_Player.FindAction("Déplacement", throwIfNotFound: true);
+        m_Player_Deplacement = m_Player.FindAction("Deplacement", throwIfNotFound: true);
         m_Player_Shoot = m_Player.FindAction("Shoot", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
         m_Player_BackShoot = m_Player.FindAction("BackShoot", throwIfNotFound: true);
         // Player1
         m_Player1 = asset.FindActionMap("Player1", throwIfNotFound: true);
-        m_Player1_Déplacement = m_Player1.FindAction("Déplacement", throwIfNotFound: true);
-        m_Player1_Shoot = m_Player1.FindAction("Shoot", throwIfNotFound: true);
-        m_Player1_Pause = m_Player1.FindAction("Pause", throwIfNotFound: true);
         m_Player1_BackShoot = m_Player1.FindAction("BackShoot", throwIfNotFound: true);
+        m_Player1_Pause = m_Player1.FindAction("Pause", throwIfNotFound: true);
+        m_Player1_Shoot = m_Player1.FindAction("Shoot", throwIfNotFound: true);
+        m_Player1_Deplacement = m_Player1.FindAction("Deplacement", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -334,7 +499,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private IPlayerActions m_PlayerActionsCallbackInterface;
-    private readonly InputAction m_Player_Déplacement;
+    private readonly InputAction m_Player_Deplacement;
     private readonly InputAction m_Player_Shoot;
     private readonly InputAction m_Player_Pause;
     private readonly InputAction m_Player_BackShoot;
@@ -342,7 +507,7 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     {
         private @PlayerInput m_Wrapper;
         public PlayerActions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Déplacement => m_Wrapper.m_Player_Déplacement;
+        public InputAction @Deplacement => m_Wrapper.m_Player_Deplacement;
         public InputAction @Shoot => m_Wrapper.m_Player_Shoot;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputAction @BackShoot => m_Wrapper.m_Player_BackShoot;
@@ -355,9 +520,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_PlayerActionsCallbackInterface != null)
             {
-                @Déplacement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDéplacement;
-                @Déplacement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDéplacement;
-                @Déplacement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDéplacement;
+                @Deplacement.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeplacement;
+                @Deplacement.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeplacement;
+                @Deplacement.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnDeplacement;
                 @Shoot.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                 @Shoot.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
                 @Shoot.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnShoot;
@@ -371,9 +536,9 @@ public class @PlayerInput : IInputActionCollection, IDisposable
             m_Wrapper.m_PlayerActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Déplacement.started += instance.OnDéplacement;
-                @Déplacement.performed += instance.OnDéplacement;
-                @Déplacement.canceled += instance.OnDéplacement;
+                @Deplacement.started += instance.OnDeplacement;
+                @Deplacement.performed += instance.OnDeplacement;
+                @Deplacement.canceled += instance.OnDeplacement;
                 @Shoot.started += instance.OnShoot;
                 @Shoot.performed += instance.OnShoot;
                 @Shoot.canceled += instance.OnShoot;
@@ -391,18 +556,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     // Player1
     private readonly InputActionMap m_Player1;
     private IPlayer1Actions m_Player1ActionsCallbackInterface;
-    private readonly InputAction m_Player1_Déplacement;
-    private readonly InputAction m_Player1_Shoot;
-    private readonly InputAction m_Player1_Pause;
     private readonly InputAction m_Player1_BackShoot;
+    private readonly InputAction m_Player1_Pause;
+    private readonly InputAction m_Player1_Shoot;
+    private readonly InputAction m_Player1_Deplacement;
     public struct Player1Actions
     {
         private @PlayerInput m_Wrapper;
         public Player1Actions(@PlayerInput wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Déplacement => m_Wrapper.m_Player1_Déplacement;
-        public InputAction @Shoot => m_Wrapper.m_Player1_Shoot;
-        public InputAction @Pause => m_Wrapper.m_Player1_Pause;
         public InputAction @BackShoot => m_Wrapper.m_Player1_BackShoot;
+        public InputAction @Pause => m_Wrapper.m_Player1_Pause;
+        public InputAction @Shoot => m_Wrapper.m_Player1_Shoot;
+        public InputAction @Deplacement => m_Wrapper.m_Player1_Deplacement;
         public InputActionMap Get() { return m_Wrapper.m_Player1; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -412,50 +577,68 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         {
             if (m_Wrapper.m_Player1ActionsCallbackInterface != null)
             {
-                @Déplacement.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDéplacement;
-                @Déplacement.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDéplacement;
-                @Déplacement.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDéplacement;
-                @Shoot.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShoot;
-                @Shoot.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShoot;
-                @Shoot.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShoot;
-                @Pause.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
-                @Pause.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
-                @Pause.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
                 @BackShoot.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnBackShoot;
                 @BackShoot.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnBackShoot;
                 @BackShoot.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnBackShoot;
+                @Pause.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Pause.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Pause.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnPause;
+                @Shoot.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShoot;
+                @Shoot.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShoot;
+                @Shoot.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnShoot;
+                @Deplacement.started -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDeplacement;
+                @Deplacement.performed -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDeplacement;
+                @Deplacement.canceled -= m_Wrapper.m_Player1ActionsCallbackInterface.OnDeplacement;
             }
             m_Wrapper.m_Player1ActionsCallbackInterface = instance;
             if (instance != null)
             {
-                @Déplacement.started += instance.OnDéplacement;
-                @Déplacement.performed += instance.OnDéplacement;
-                @Déplacement.canceled += instance.OnDéplacement;
-                @Shoot.started += instance.OnShoot;
-                @Shoot.performed += instance.OnShoot;
-                @Shoot.canceled += instance.OnShoot;
-                @Pause.started += instance.OnPause;
-                @Pause.performed += instance.OnPause;
-                @Pause.canceled += instance.OnPause;
                 @BackShoot.started += instance.OnBackShoot;
                 @BackShoot.performed += instance.OnBackShoot;
                 @BackShoot.canceled += instance.OnBackShoot;
+                @Pause.started += instance.OnPause;
+                @Pause.performed += instance.OnPause;
+                @Pause.canceled += instance.OnPause;
+                @Shoot.started += instance.OnShoot;
+                @Shoot.performed += instance.OnShoot;
+                @Shoot.canceled += instance.OnShoot;
+                @Deplacement.started += instance.OnDeplacement;
+                @Deplacement.performed += instance.OnDeplacement;
+                @Deplacement.canceled += instance.OnDeplacement;
             }
         }
     }
     public Player1Actions @Player1 => new Player1Actions(this);
+    private int m_KeyboardandMouseSchemeIndex = -1;
+    public InputControlScheme KeyboardandMouseScheme
+    {
+        get
+        {
+            if (m_KeyboardandMouseSchemeIndex == -1) m_KeyboardandMouseSchemeIndex = asset.FindControlSchemeIndex("Keyboard and Mouse");
+            return asset.controlSchemes[m_KeyboardandMouseSchemeIndex];
+        }
+    }
+    private int m_GamepadSchemeIndex = -1;
+    public InputControlScheme GamepadScheme
+    {
+        get
+        {
+            if (m_GamepadSchemeIndex == -1) m_GamepadSchemeIndex = asset.FindControlSchemeIndex("Gamepad");
+            return asset.controlSchemes[m_GamepadSchemeIndex];
+        }
+    }
     public interface IPlayerActions
     {
-        void OnDéplacement(InputAction.CallbackContext context);
+        void OnDeplacement(InputAction.CallbackContext context);
         void OnShoot(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
         void OnBackShoot(InputAction.CallbackContext context);
     }
     public interface IPlayer1Actions
     {
-        void OnDéplacement(InputAction.CallbackContext context);
-        void OnShoot(InputAction.CallbackContext context);
-        void OnPause(InputAction.CallbackContext context);
         void OnBackShoot(InputAction.CallbackContext context);
+        void OnPause(InputAction.CallbackContext context);
+        void OnShoot(InputAction.CallbackContext context);
+        void OnDeplacement(InputAction.CallbackContext context);
     }
 }
