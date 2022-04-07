@@ -11,9 +11,8 @@ GameObject:
   - component: {fileID: 6771443032632296106}
   - component: {fileID: 6771443032632296105}
   - component: {fileID: 6771443032632296104}
-  - component: {fileID: 3223208248803755605}
   m_Layer: 0
-  m_Name: Spawn_time_teddy bearD
+  m_Name: Spawn_time_sorciere 1
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,12 +44,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840b4493df9b114e967f8fe086fe798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7621097087546261752, guid: 22bedd46da8fe8c438b9f4bda453ab14, type: 3}
-  time: 0
+  enemy: {fileID: 8464536041456418611, guid: 15441351793e21d4185baf486bd2f5ef, type: 3}
   timeBetweenWaves: 10
-  countDown: 10
+  countDown: 5
   state: 2
-  searchCountdown: 1
 --- !u!114 &6771443032632296104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64,19 +61,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnspeed: 1
---- !u!114 &3223208248803755605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6771443032632296103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 940316c26d14e37499384e594fedd331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 45
-  timerIsRunning: 0
-  timeText: {fileID: 0}
-  spawn: {fileID: 0}

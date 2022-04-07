@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6771443032632296103
+--- !u!1 &3008731036176356798
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,75 +8,56 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6771443032632296106}
-  - component: {fileID: 6771443032632296105}
-  - component: {fileID: 6771443032632296104}
-  - component: {fileID: 3223208248803755605}
+  - component: {fileID: 3008731036176356787}
+  - component: {fileID: 3008731036176356784}
+  - component: {fileID: 3008731036176356785}
   m_Layer: 0
-  m_Name: Spawn_time_teddy bearD
+  m_Name: Spawn_time_serveurD
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6771443032632296106
+--- !u!4 &3008731036176356787
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6771443032632296103}
+  m_GameObject: {fileID: 3008731036176356798}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.03, y: 23.86, z: -1.19}
+  m_LocalPosition: {x: 27.8, y: 10.14, z: -1.19}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6771443032632296105
+--- !u!114 &3008731036176356784
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6771443032632296103}
+  m_GameObject: {fileID: 3008731036176356798}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b840b4493df9b114e967f8fe086fe798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7621097087546261752, guid: 22bedd46da8fe8c438b9f4bda453ab14, type: 3}
-  time: 0
+  enemy: {fileID: 689229698985660456, guid: e7805f33d7f28ce46a2545fa6c62ffdd, type: 3}
   timeBetweenWaves: 10
-  countDown: 10
+  countDown: 5
   state: 2
-  searchCountdown: 1
---- !u!114 &6771443032632296104
+--- !u!114 &3008731036176356785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6771443032632296103}
+  m_GameObject: {fileID: 3008731036176356798}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2790062b689f6224388977bdec3b4d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spawnspeed: 1
---- !u!114 &3223208248803755605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6771443032632296103}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 940316c26d14e37499384e594fedd331, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 45
-  timerIsRunning: 0
-  timeText: {fileID: 0}
-  spawn: {fileID: 0}

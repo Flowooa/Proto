@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6771443032632296106}
   - component: {fileID: 6771443032632296105}
   - component: {fileID: 6771443032632296104}
+  - component: {fileID: 6337770633268200569}
   m_Layer: 0
   m_Name: Spawn_time_spider2
   m_TagString: Ennemy
@@ -44,10 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840b4493df9b114e967f8fe086fe798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 4926318375703651376, guid: 340af1a4d5695cd40ac58a6ee859dab7, type: 3}
+  enemy: {fileID: 2963813853560494568, guid: 26904954ffc1bf04c80debd56a717412, type: 3}
+  time: 0
   timeBetweenWaves: 10
-  countDown: 5
+  countDown: 10
   state: 2
+  searchCountdown: 1
 --- !u!114 &6771443032632296104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,3 +64,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnspeed: 1
+--- !u!114 &6337770633268200569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6771443032632296103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940316c26d14e37499384e594fedd331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 45
+  timerIsRunning: 0
+  timeText: {fileID: 0}
+  spawn: {fileID: 0}

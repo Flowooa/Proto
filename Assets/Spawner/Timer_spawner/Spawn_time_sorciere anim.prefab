@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 6771443032632296106}
   - component: {fileID: 6771443032632296105}
   - component: {fileID: 6771443032632296104}
-  - component: {fileID: 3223208248803755605}
+  - component: {fileID: 1533655816501222296}
   m_Layer: 0
-  m_Name: Spawn_time_teddy bearD
+  m_Name: Spawn_time_sorciere anim
   m_TagString: Ennemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b840b4493df9b114e967f8fe086fe798, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemy: {fileID: 7621097087546261752, guid: 22bedd46da8fe8c438b9f4bda453ab14, type: 3}
+  enemy: {fileID: 7163120833230644883, guid: 638ced6154c14f741851a167136e3399, type: 3}
   time: 0
   timeBetweenWaves: 10
   countDown: 10
@@ -64,7 +64,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnspeed: 1
---- !u!114 &3223208248803755605
+--- !u!114 &1533655816501222296
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
