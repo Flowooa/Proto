@@ -18,9 +18,9 @@ public class PlayerController : MonoBehaviour
     {
         rb.velocity = MoveInput * speed;
     }
-     public void ChangementDirection(InputAction.CallbackContext context)
+     public void OnDeplacement(InputValue value)
     {
-        MoveInput = context.ReadValue<Vector2>();
+        MoveInput = value.Get<Vector2>();
     }
 
     

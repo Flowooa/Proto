@@ -17,7 +17,7 @@ public class Player2scrip : MonoBehaviour
         }
         else
         {
-            var solo = FindObjectOfType<PlayerSolo>().transform;
+            var solo = FindObjectOfType<PlayerController>().transform;
             var soloPosition = solo.position;
             var soloParent = solo.parent;
             Destroy(solo.gameObject);

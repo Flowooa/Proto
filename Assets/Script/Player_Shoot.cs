@@ -21,9 +21,9 @@ public class Player_Shoot : MonoBehaviour
         guns1 = transform.GetComponentsInChildren<Gun_Shoot1>();
     }
     
-    public void TirDroite (InputAction.CallbackContext context)
+    public void OnShoot(InputValue value)
     {
-        if (Time.time > lastShoot + cadence)
+        if (value.isPressed && Time.time > lastShoot + cadence)
         {
             shoot = false;
             foreach (Gun_Shoot gun in guns)
@@ -32,9 +32,9 @@ public class Player_Shoot : MonoBehaviour
             }
         }
     }
-    public void TirGauche (InputAction.CallbackContext context)
+    public void OnBackShoot(InputValue value)
     {
-        if (Time.time > lastShoot + cadence)
+        if (value.isPressed && Time.time > lastShoot + cadence)
         {
             shoot1 = false;
             foreach (Gun_Shoot1 gun in guns1)
@@ -43,6 +43,4 @@ public class Player_Shoot : MonoBehaviour
             }
         }
     }
-
-  
 }

@@ -7,13 +7,14 @@ public class Spawner_timer : MonoBehaviour
 {
     // Start is called before the first frame update
     public Transform enemy;
+    public int time = 0;
 
     public float timeBetweenWaves = 5f;
     public float countDown = 2f;
     public enum SpawnState { SPAWNING, WAITING, COUNTING };
     public SpawnState state = SpawnState.COUNTING;
 
-    //public float searchCountdown = 1f; 
+    public float searchCountdown = 1f; 
 
     private List<Transform> enemies = new List<Transform>();
     private int waveIndex = 0;
@@ -73,4 +74,6 @@ public class Spawner_timer : MonoBehaviour
     {
         enemies.Add(Instantiate(enemy, transform.position, transform.rotation));
     }
+
+
 }

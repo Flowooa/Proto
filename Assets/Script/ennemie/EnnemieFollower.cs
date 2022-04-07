@@ -12,7 +12,7 @@ public class EnnemieFollower : MonoBehaviour
     void Start()
     {
         
-        rb = this.GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         var p = GameObject.FindWithTag("Player");
         player = p.transform;
     }
@@ -28,10 +28,10 @@ public class EnnemieFollower : MonoBehaviour
 
     private void FixedUpdate()
     {
-        moveCharacter(movement);
+        MoveCharacter(movement);
     }
 
-    void moveCharacter(Vector2 direction)
+    void MoveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * moveSpeed * Time.deltaTime));
     }
