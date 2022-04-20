@@ -31,17 +31,6 @@ public class secondtry : MonoBehaviour
         if (context.canceled)
             shootpressed = false;
 
-        if (!context.performed)
-            return;
-
-        if (Time.time > lastShoot + cadence)
-        {
-            shoot = false;
-            foreach (Gun_Shoot gun in guns)
-            {
-                gun.Shoot();
-            }
-        }
     }
     public void TirGauche(InputAction.CallbackContext context)
     {
@@ -49,17 +38,7 @@ public class secondtry : MonoBehaviour
             StartCoroutine(shoot1Couroutine());
         if (context.canceled)
             shootpressed1 = false;
-        if (!context.performed)
-            return;
-
-        if (Time.time > lastShoot + cadence)
-        {
-            shoot1 = false;
-            foreach (Gun_Shoot1 gun in guns1)
-            {
-                gun.Shoot1();
-            }
-        }
+        
     }
 
     private IEnumerator shoot1Couroutine()

@@ -14,4 +14,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LoseScreen.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/E1.unity
+    guid: 5fb3be93c067f0c419bcbb1c8a99c979
+  - enabled: 1
+    path: Assets/Scenes/E2.unity
+    guid: 17d64e03168d3834880ad96c9bed5688
+  - enabled: 1
+    path: Assets/Scenes/E3.unity
+    guid: ba07c836907c71344bf125ad68eb8e70
+  - enabled: 1
+    path: Assets/Scenes/E4.unity
+    guid: 5988303c17d160f43bc196de3e3c80d6
+  - enabled: 1
+    path: Assets/Scenes/E5.unity
+    guid: 47883edc45defa0418e9f874a1a6bddc
+  - enabled: 1
+    path: Assets/Scenes/E6.unity
+    guid: 53aed52fb5a080e488d1903b66d143c0
   m_configObjects: {}
