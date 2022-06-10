@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7886475351959486763}
   - component: {fileID: 7886475351959486762}
   - component: {fileID: 7886475351959486761}
+  - component: {fileID: -1708164707057666320}
   m_Layer: 0
   m_Name: Spawn_time_boule_explode
   m_TagString: Ennemy
@@ -45,9 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 3015829194148476855, guid: 84a05b541d811234b979d637e9c1f41e, type: 3}
+  time: 0
   timeBetweenWaves: 10
-  countDown: 5
+  countDown: 10
   state: 2
+  searchCountdown: 1
 --- !u!114 &7886475351959486761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,3 +64,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnspeed: 1
+--- !u!114 &-1708164707057666320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886475351959486760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940316c26d14e37499384e594fedd331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 55
+  timerIsRunning: 0
+  timeText: {fileID: 0}
+  spawn: {fileID: 0}

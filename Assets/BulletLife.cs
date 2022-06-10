@@ -28,8 +28,8 @@ public class BulletLife : MonoBehaviour
     {
         if (collision.gameObject.tag == "Ennemy")
             TakeDamage();
-        if (collision.gameObject.tag == "Bullet")
-            TakeDamage();
+       // if (collision.gameObject.tag == "Bullet")
+       //     TakeDamage(); 
         if(collision.gameObject.tag == "Wall")
             TakeDamage();
     }

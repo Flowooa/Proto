@@ -48,7 +48,7 @@ MonoBehaviour:
   enemy: {fileID: 5624639479739636584, guid: 6ca4703cb8327ee45af385447741613d, type: 3}
   time: 0
   timeBetweenWaves: 10
-  countDown: 5
+  countDown: 10
   state: 2
   searchCountdown: 1
 --- !u!114 &4878071117856421487
@@ -76,4 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 940316c26d14e37499384e594fedd331, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 5
+  timeRemaining: 55
+  timerIsRunning: 0
+  timeText: {fileID: 0}
+  spawn: {fileID: 0}

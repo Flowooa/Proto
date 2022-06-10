@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2086994054485324449}
   - component: {fileID: 2086994054485324450}
   - component: {fileID: 2086994054485324451}
+  - component: {fileID: -8042265203700961607}
   m_Layer: 0
   m_Name: Spawn_time_spider 1 1
   m_TagString: Ennemy
@@ -45,9 +46,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 8622858273608328621, guid: 90dd861b300d9ae45bbd150af1362f30, type: 3}
+  time: 0
   timeBetweenWaves: 10
-  countDown: 5
+  countDown: 10
   state: 2
+  searchCountdown: 1
 --- !u!114 &2086994054485324451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,3 +64,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnspeed: 1
+--- !u!114 &-8042265203700961607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086994054485324460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 940316c26d14e37499384e594fedd331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timeRemaining: 55
+  timerIsRunning: 0
+  timeText: {fileID: 0}
+  spawn: {fileID: 0}

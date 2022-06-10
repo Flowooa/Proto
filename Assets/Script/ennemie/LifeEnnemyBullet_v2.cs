@@ -28,6 +28,8 @@ public class LifeEnnemyBullet_v2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
             TakeDamage();
+        if (collision.gameObject.tag == "Player_bullet")
+            TakeDamage();
     }
 
 

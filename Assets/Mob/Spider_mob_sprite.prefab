@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2587652451326605109}
   - component: {fileID: 2587652451326605108}
   - component: {fileID: 2739699820448520188}
+  - component: {fileID: 8212407034452289713}
   m_Layer: 0
   m_Name: Spider_mob_sprite
   m_TagString: Ennemy
@@ -110,9 +111,27 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2587652451326605107}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 37f192c4c57130e42a8cf4b360b4b44d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 2
+  startingHealth: 2
+  damageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  currentHealth: 0
+--- !u!114 &8212407034452289713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2587652451326605107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd9953c7ae7c98f4f91e737b482b6226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 2
