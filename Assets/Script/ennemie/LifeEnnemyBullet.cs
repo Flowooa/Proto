@@ -32,6 +32,7 @@ public class LifeEnnemyBullet : MonoBehaviour
             TakeDamage();
         if (collision.gameObject.tag == "Ennemy")
             TakeDamage();
+        
     }
 
 

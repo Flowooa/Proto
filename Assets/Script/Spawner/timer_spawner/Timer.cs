@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
     public GameObject spawn;
     private void Start()
     {
-        // Starts the timer automatically
+        // start automatiquement le spawn
         timerIsRunning = true;
     }
     void Update()
