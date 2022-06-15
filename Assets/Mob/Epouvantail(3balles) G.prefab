@@ -189,6 +189,7 @@ GameObject:
   - component: {fileID: 5624639479739636587}
   - component: {fileID: 5624639479739636586}
   - component: {fileID: 5624639479739636589}
+  - component: {fileID: 3559187285172808851}
   m_Layer: 0
   m_Name: Epouvantail(3balles) G
   m_TagString: Ennemy
@@ -205,7 +206,7 @@ Transform:
   m_GameObject: {fileID: 5624639479739636588}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 21.41, y: 25.3, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5624639478922467452}
   - {fileID: 5624639478293581587}
@@ -253,7 +254,7 @@ SpriteRenderer:
   m_SortingLayerID: -374035991
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e82350a4439e8dc45b1bdda8fdcccc09, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ed17297b91d6aeb408d7517e75f89f56, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -277,18 +278,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.2082094, y: -1.0116642}
+  m_Offset: {x: 0.08287811, y: 0.7966819}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9.36, y: 12.43}
+    oldSize: {x: 19.2, y: 10.8}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.2382367, y: 10.32399}
+  m_Size: {x: 4.9928703, y: 6.7072973}
   m_EdgeRadius: 0
 --- !u!114 &5624639479739636589
 MonoBehaviour:
@@ -308,3 +309,22 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   currentHealth: 0
+--- !u!95 &3559187285172808851
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5624639479739636588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe580392589648d449edd19a544948a8, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
