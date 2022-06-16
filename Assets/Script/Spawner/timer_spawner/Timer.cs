@@ -4,7 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
-    
+    private Spawner_timer mySpawner;
+
     public float timeRemaining = 45;
     public bool timerIsRunning = false;
     public Text timeText;
@@ -14,6 +15,7 @@ public class Timer : MonoBehaviour
     {
         // start automatiquement le spawn
         timerIsRunning = true;
+        mySpawner = GetComponent<Spawner_timer>();
     }
     void Update()
     {
@@ -32,11 +34,16 @@ public class Timer : MonoBehaviour
                 Destroy(obj: gameObject);
 
             }
+            
         }
 
 
        
     }
+
+    
+
+   
     void DisplayTime(float timeToDisplay)
     {
         timeToDisplay += 1;
