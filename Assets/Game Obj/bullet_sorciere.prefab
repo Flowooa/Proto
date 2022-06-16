@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5154324669743585835}
   - component: {fileID: 1016766391867384706}
   - component: {fileID: 5040876260849739125}
+  - component: {fileID: 1590337954093626109}
   m_Layer: 9
   m_Name: bullet_sorciere
   m_TagString: Bullet
@@ -31,7 +32,7 @@ Transform:
   m_GameObject: {fileID: 3030047603422091971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -76,8 +77,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: ebe73ca9363db456bacf42c025bb4847, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 99d38303b1227b9458a7cd5cf2912f7c, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -114,9 +115,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0.38941294, y: 0}
   serializedVersion: 2
-  m_Radius: 0.49999997
+  m_Radius: 3.4206007
 --- !u!50 &5154324669743585835
 Rigidbody2D:
   serializedVersion: 4
@@ -171,3 +172,22 @@ MonoBehaviour:
   amplitude: 3
   frequency: 1
   inverted: 0
+--- !u!95 &1590337954093626109
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3030047603422091971}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b8e039b17b4491745883ffdd38e17593, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
